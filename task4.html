@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+// Print odd numbers in an array
+// anonymous
+var anonymousOdd=function(array){
+                  for(var i = 0 ; i< array.length ; i++){
+     if(array[i]%2!=0){
+     console.log(array[i]) 
+                        } 
+                   }
+                }
+anonymousOdd([6,7,4,9,11,13]);
+// console.log(res);
+
+// IIFE      
+(function(array){
+ for(var i = 0 ; i< array.length ; i++){
+       if(array[i]%2!=0){
+          console.log(array[i])
+               } 
+             }
+         })([1,2,3,4])
+
+
+ // Arrow Function
+var array=[1,2,3,4,5,6,7];
+var oddNumbers = array => {
+                   for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   } 
+                }
+                oddNumbers(array)
+
+                // Convert all the strings to title caps in a string array
+// Anonymous
+var set=function (str) {
+                    str = str.toLowerCase().split(' ');
+                    // console.log(str);
+                    for (var i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    result=str.join(' ');
+                    console.log(result);
+                  }
+               set("FABIO IS A GOOD BOY");
+
+// IIFE
+(function(string){
+                    string = string.toLowerCase().split(' ');
+                    // console.log(str);
+                    for (var i = 0; i < string.length; i++) {
+                      string[i] = string[i].charAt(0).toUpperCase() + string[i].slice(1); 
+                    } 
+                    result=string.join(' ');
+                    console.log(result);
+                  })("EVANA WAS DANCING")
+
+// Arrow
+var string="ADHICK IS STUDUYING";
+var tittleCase=(string)=>{
+                    string = string.toLowerCase().split(' ');
+                    // console.log(str);
+                    for (var i = 0; i < string.length; i++) {
+                      string[i] = string[i].charAt(0).toUpperCase() + string[i].slice(1); 
+                    } 
+                    result=string.join(' ');
+                    console.log(result);
+                  }
+tittleCase(string);
+
+
+// Sum of all numbers in an array 
+
+// Anonymous
+var sum=function(arr){
+     var sum=0;
+    for (var i =0; i <arr.length; i++){
+        sum+=arr[i];
+    }
+    console.log(sum);
+}
+sum([1,2,3,4]);
+
+
+ // IIFE
+(function(arr){
+     var sum=0;
+    for (var i =0; i <arr.length; i++){
+        sum+=arr[i];
+    }
+    console.log(sum);
+})([1,2,3,4])
+
+
+// Arrow Function
+var arr=[1,2,3,4]
+var sumNum=()=>{
+    var sum=0;
+    for (var i =0; i <arr.length; i++){
+        sum+=arr[i];
+    }
+    console.log(sum);
+}
+sumNum(arr)
+ 
+
+// Return all the prime numbers in an array
+// Anonymous
+
+var prime=function(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  }      
+              prime([1,2,3,4,5,6,7,8,9]) ;
+// IIFE
+(function(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  }      
+                )([1,2,3,4,5,6,7,8,9])
+
+// Arrow
+var numArray=[1,2,3,4,5,6,7,8,9]
+var prime=(numArray)=>{
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                    }    
+              prime(numArray) ;
+
+// g.Remove duplicates from an array
+// Anonymous Function : 
+var duplicate=function(array){
+   let dup = [...new Set(array)];
+       console.log(dup);
+       }
+duplicate([1,2,2,3,4]);
+
+
+// IIFE :           
+     (function(array){
+     let dup = [...new Set(array)];
+     console.log(dup);
+    })([1,1,2,3,4])
+
+
+</script>
+</body>
+</html>
